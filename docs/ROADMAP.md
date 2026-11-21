@@ -1,12 +1,14 @@
 # ESINOS — Development Roadmap
 
 ## Phase 0 — Project Foundation
-- [ ] Configure the development environment
-- [ ] Create the project architecture
-- [ ] Create the application entry point
-- [ ] Configure automated testing
-- [ ] Initialize documentation
-- [ ] Configure Git and GitHub
+- [x] Configure the development environment
+- [x] Create the project architecture
+- [x] Create the application entry point
+- [x] Configure automated testing
+- [x] Initialize documentation
+- [x] Configure Git and GitHub
+
+Status: COMPLETED
 
 ## CPU Scheduling
 
