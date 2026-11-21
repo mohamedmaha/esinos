@@ -41,6 +41,67 @@ Expected Result:
 Status: PASSED
 Result: 1/1 tests passed
 
+
+## Phase 1 — Scheduling Data Models
+
+### TEST-003: Process Model Validation
+
+Component: `code/esinos/scheduling/process.py`
+
+Tests:
+- Valid process creation
+- Default priority
+- Invalid PID validation
+- Invalid arrival time
+- Invalid burst time
+- Invalid priority
+- Process immutability
+
+Result: PASSED (18/18 tests)
+
+### TEST-004: GanttSegment Validation
+
+Component: `code/esinos/scheduling/result.py`
+
+Tests:
+- Valid Gantt segment
+- IDLE segment
+- Invalid time intervals
+- Invalid PID validation
+
+Result: PASSED (10/10 tests)
+
+### TEST-005: ProcessResult Validation
+
+Component: `code/esinos/scheduling/result.py`
+
+Tests:
+- FCFS metrics calculation
+- Preemptive scheduling metrics
+- Invalid process object
+- Invalid execution times
+- Result immutability
+
+Result: PASSED (8/8 tests)
+
+## Current Test Summary
+
+Command:
+`python -m pytest -v`
+
+Results:
+- Phase 0: 1 test passed
+- Process Model: 18 tests passed
+- GanttSegment: 10 tests passed
+- ProcessResult: 8 tests passed
+
+**Total: 37 passed, 0 failed**
+
+Execution time: 0.32 seconds
+
+Overall status: PASSED
+
+
 ## Future Tests
 
 ### CPU Scheduling
