@@ -145,6 +145,22 @@ Status: AUTOMATED TESTS PASSED
 Implement the process results table.
 
 
+### TEST-009: Process Results Table
+
+Component: code/esinos/ui/table.py
+
+Validated scenarios:
+- Correct process metrics
+- IDLE exclusion
+- Large values and long identifiers
+- Invalid input rejection
+- Summary preservation
+
+Result: PASSED (5/5)
+
+Full regression suite: 66/66 PASSED
+
+
 ## Future Tests
 
 ### CPU Scheduling
