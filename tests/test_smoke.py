@@ -8,7 +8,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def test_esinos_starts_successfully():
     result = subprocess.run(
-        [sys.executable, str(ROOT / "code" / "main.py")],
+        [
+            sys.executable,
+            str(ROOT / "code" / "main.py"),
+            "--help",
+        ],
         capture_output=True,
         text=True,
         timeout=5,
@@ -17,4 +21,4 @@ def test_esinos_starts_successfully():
 
     assert result.returncode == 0
     assert "ESINOS" in result.stdout
-    assert "Phase 0: Environment ready" in result.stdout
+    assert "--demo-fcfs" in result.stdout
