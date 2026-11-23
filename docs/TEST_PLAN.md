@@ -102,6 +102,28 @@ Execution time: 0.32 seconds
 Overall status: PASSED
 
 
+### TEST-006: FCFS Scheduler
+
+Component: code/esinos/scheduling/fcfs.py
+
+Validated scenarios:
+- Standard FCFS scheduling
+- CPU idle intervals
+- Equal arrival times
+- Unsorted process input
+- Single process
+- Empty input rejection
+- Duplicate PID rejection
+- Invalid process rejection
+- Input preservation
+
+Result: PASSED (9/9)
+
+Full regression suite: 46/46 PASSED
+
+Status: VALIDATED BY AUTOMATED TESTS
+
+
 ## Future Tests
 
 ### CPU Scheduling
