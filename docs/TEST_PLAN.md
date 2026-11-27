@@ -181,6 +181,39 @@ Results:
 Status: PASSED
 
 
+## SJF Technical Audit
+
+Component: code/esinos/scheduling/sjf.py
+Test file: tests/test_sjf_audit.py
+
+Result: 5/5 PASSED
+Full regression suite: 108/108 PASSED
+
+Status: VALIDATED
+
+
+## Phase 2 — Final SJF Validation
+
+Components:
+- code/esinos/scheduling/sjf.py
+- code/esinos/ui/comparison.py
+- code/main.py
+
+Validated:
+- Scheduling correctness
+- Ready queue selection
+- Tie-breaking rules
+- CPU idle intervals
+- Non-preemptive execution
+- FCFS/SJF metric comparison
+- Command-line execution
+- Interactive menu functionality
+- Regression testing
+
+Final result: 124/124 PASSED
+Status: VALIDATED
+
+
 ## Future Tests
 
 ### CPU Scheduling
@@ -191,3 +224,4 @@ To be defined in Phases 6-9.
 
 ### File System
 To be defined in Phase 11.
+

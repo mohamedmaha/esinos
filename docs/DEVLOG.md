@@ -209,3 +209,53 @@ Status: COMPLETED
 ### Conclusion
 FCFS development and validation completed.
 Ready to begin Phase 2 — SJF Scheduling.
+
+
+## Phase 2D — SJF Technical Audit
+
+Status: PASSED
+
+### Validation
+- 100 reproducible randomized scenarios
+- SJF reference timeline comparison
+- 50 simultaneous-arrival FCFS/SJF comparisons
+- Tie-breaking and multiple IDLE intervals
+- Non-preemptive execution
+- Large arrival-time values
+
+### Results
+- Audit tests: 5/5 PASSED
+- Full test suite: 108/108 PASSED
+- Execution time: 1.37 seconds
+
+### Next Step
+Integrate SJF into the ESINOS main application.
+
+
+## Phase 2 — SJF Scheduling
+
+Status: FUNCTIONALLY VALIDATED
+
+### Implementation
+- Non-preemptive SJF scheduler
+- Input validation and ready-process selection
+- Deterministic tie-breaking
+- CPU IDLE interval handling
+- SchedulingSummary compatibility
+- SJF report visualization
+- FCFS vs SJF comparison
+- Interactive CLI integration
+
+### Testing
+- Full test suite: 124/124 PASSED
+- Failures: 0
+- Execution time: 2.88 seconds
+- Randomized scheduling audit: PASSED
+- CLI integration: PASSED
+
+### Remaining
+- Final oral defense
+- Git milestone commit
+
+### Next Phase
+Phase 3 — Round Robin Scheduling
