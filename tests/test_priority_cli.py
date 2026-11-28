@@ -102,7 +102,7 @@ def test_priority_rejects_quantum_argument():
 
 def test_invalid_menu_choice_then_priority():
     result = run_esinos(
-        user_input="7\n6\n0\n"
+        user_input="99\n6\n0\n"
     )
 
     assert result.returncode == 0

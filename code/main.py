@@ -7,6 +7,8 @@ from esinos.scheduling.rr import schedule_rr
 
 from esinos.scheduling.priority import schedule_priority
 
+from esinos.ui.custom_scheduling import run_custom_scheduling
+
 
 from esinos.ui.comparison_three import render_three_way_comparison
 
@@ -236,6 +238,7 @@ def run_menu() -> int:
         print("[4] CPU Scheduling - Round Robin")
         print("[5] Compare FCFS vs SJF vs RR")
         print("[6] CPU Scheduling - Priority Demo")
+        print("[7] Custom CPU Scheduling")
         print("[0] Exit")
         print()
 
@@ -319,6 +322,9 @@ def run_menu() -> int:
         
         elif choice == "6":
             run_priority_demo()
+
+        elif choice == "7":
+            run_custom_scheduling()
 
         elif choice == "0":
             print("Exiting ESINOS.")

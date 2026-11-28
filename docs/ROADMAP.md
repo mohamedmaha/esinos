@@ -78,3 +78,22 @@ Status: COMPLETED
 - [ ] Prepare report.pdf
 - [ ] Record demo.mp4
 - [ ] Prepare oral defense
+
+
+## CPU Scheduling — Consolidation
+
+- [x] FCFS implementation
+- [x] SJF non-preemptive implementation
+- [x] Round Robin implementation
+- [x] Priority non-preemptive implementation
+- [x] Scheduling metrics
+- [x] Gantt visualization
+- [x] Command-line demonstrations
+- [x] FCFS/SJF comparison
+- [x] FCFS/SJF/RR comparison
+- [x] Automated tests and randomized audits
+- [ ] Custom process input
+- [ ] Final integration audit
+- [ ] Oral defense
+
+Current regression baseline: 208 passed.

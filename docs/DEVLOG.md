@@ -345,3 +345,33 @@ Remaining work:
 
 ### Next Module
 Memory Management
+
+
+## CPU Scheduling — Final Functional Milestone
+
+Status: VALIDATED
+Regression baseline: 242 tests passed
+
+Implemented:
+- FCFS
+- SJF (non-preemptive)
+- Round Robin (preemptive, configurable quantum)
+- Priority Scheduling (non-preemptive)
+- Gantt chart rendering
+- Waiting, turnaround and response time metrics
+- CPU utilization and idle-time metrics
+- Interactive process input
+- Four-algorithm comparison
+- CLI demonstrations and interactive menus
+
+Validation:
+- Unit tests
+- Randomized reference audits
+- Integration tests
+- Regression tests
+
+Remaining:
+- Final oral defenses (postponed)
+- Final project-wide integration review
+
+Next milestone: Memory Management
