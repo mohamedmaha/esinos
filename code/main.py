@@ -5,6 +5,8 @@ from esinos.ui.comparison import render_scheduling_comparison
 
 from esinos.scheduling.rr import schedule_rr
 
+from esinos.scheduling.priority import schedule_priority
+
 
 from esinos.ui.comparison_three import render_three_way_comparison
 
@@ -184,6 +186,39 @@ def run_three_way_comparison_demo(
     print()
 
 
+def run_priority_demo() -> None:
+    """Run non-preemptive Priority Scheduling demo."""
+
+    processes = [
+        Process("P1", 0, 6, priority=3),
+        Process("P2", 1, 2, priority=1),
+        Process("P3", 2, 4, priority=2),
+        Process("P4", 4, 1, priority=1),
+    ]
+
+    # Step 1: Execute Priority Scheduling
+    results, gantt = schedule_priority(processes)
+
+    # Step 2: Build scheduling summary
+    summary = SchedulingSummary(
+        results=tuple(results),
+        gantt=tuple(gantt),
+    )
+
+    # Step 3: Generate report
+    report = render_scheduling_report(
+        summary,
+        "PRIORITY",
+    )
+
+    print()
+    print("Priority Scheduling (Non-Preemptive)")
+    print("Priority rule: lower number = higher priority")
+    print()
+    print(report)
+    print()
+
+
 def run_menu() -> int:
     """Display the interactive ESINOS main menu."""
 
@@ -200,6 +235,7 @@ def run_menu() -> int:
         print("[3] Compare FCFS vs SJF")
         print("[4] CPU Scheduling - Round Robin")
         print("[5] Compare FCFS vs SJF vs RR")
+        print("[6] CPU Scheduling - Priority Demo")
         print("[0] Exit")
         print()
 
@@ -280,6 +316,9 @@ def run_menu() -> int:
                 continue
 
             run_three_way_comparison_demo(quantum)
+        
+        elif choice == "6":
+            run_priority_demo()
 
         elif choice == "0":
             print("Exiting ESINOS.")
@@ -294,8 +333,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="ESINOS - Educational OS Simulator"
     )
-
+    
     demo_group = parser.add_mutually_exclusive_group()
+    
+    demo_group.add_argument(
+        "--demo-priority",
+        action="store_true",
+        help="Run non-preemptive Priority Scheduling demo",
+)
 
     demo_group.add_argument(
         "--demo-fcfs",
@@ -379,6 +424,10 @@ def main() -> int:
         )
 
         run_three_way_comparison_demo(quantum)
+        return 0
+    
+    if args.demo_priority:
+        run_priority_demo()
         return 0
 
     return run_menu()
